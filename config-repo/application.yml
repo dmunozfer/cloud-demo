@@ -1,6 +1,0 @@
-
-debug=true
-
-ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
