@@ -1,0 +1,5 @@
+# genera la imagen docker
+mvn package docker:build
+
+# ejecuta la imagen
+docker run --name scd-config-server -h scd-config-server -p 8888:8888 -d spring_cloud_demo/config-server
