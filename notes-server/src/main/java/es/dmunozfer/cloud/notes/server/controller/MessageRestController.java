@@ -19,7 +19,7 @@ public class MessageRestController {
         this.message = message;
     }
 
-    @GetMapping(value = "/message")
+    @GetMapping("/message")
     public String read() {
         return message;
     }
