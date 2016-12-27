@@ -1,5 +1,6 @@
 package es.dmunozfer.cloud.notes.client.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.hateoas.Resources;
@@ -8,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.stream.Collectors;
 
 /**
@@ -25,8 +27,14 @@ public class NotesApiGateway {
         this.notesReader = notesReader;
     }
 
+
+    public Collection<String> fallbackText() {
+        return new ArrayList<>();
+    }
+
+    @HystrixCommand(fallbackMethod = "fallbackText")
     @GetMapping("text")
-    public List<String> text() {
+    public Collection<String> text() {
         return this.notesReader
                 .notes()
                 .getContent()
