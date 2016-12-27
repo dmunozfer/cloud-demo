@@ -1,0 +1,8 @@
+# crea la red donde estarán todos los contenedores de la demo
+docker network create --driver bridge scd_network
+
+# genera la imagen docker
+mvn package docker:build -DskipTests
+
+# ejecuta la imagen
+docker run --network=scd_network --name scd-eureka-server -h scd-eureka-server -p 8761:8761 -d spring_cloud_demo/eureka-server
