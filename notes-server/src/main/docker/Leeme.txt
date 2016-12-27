@@ -5,4 +5,4 @@ docker network create --driver bridge scd_network
 mvn package docker:build -DskipTests
 
 # ejecuta la imagen
-docker run --network=scd_network --name scd-config-server -h scd-config-server -p 8888:8888 -d spring_cloud_demo/config-server
+docker run --network=scd_network --name scd-notes-server -h scd-notes-server -p 8000:8000 -d spring_cloud_demo/notes-server
