@@ -57,7 +57,7 @@ El endpoint para autenticar es http://localhost:9191/oauth/token
 + http://localhost:8761/
 
 ###Zipkin
-+ http://10.0.75.1:9411/
++ http://localhost:9411/
 
 ###Notes - Server
 + http://localhost:8000/notes - Listado de notas
