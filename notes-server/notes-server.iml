@@ -107,12 +107,15 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-rsa:1.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.55" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.55" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-zipkin:1.1.1.BUILD-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-sleuth:1.1.1.BUILD-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:1.4.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-sleuth-core:1.1.1.BUILD-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.9" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-sleuth-zipkin:1.1.1.BUILD-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: io.zipkin.java:zipkin:1.16.2" level="project" />
+    <orderEntry type="library" name="Maven: io.zipkin.reporter:zipkin-reporter:0.6.9" level="project" />
+    <orderEntry type="library" name="Maven: io.zipkin.java:zipkin:test-jar:tests:1.16.2" level="project" />
+    <orderEntry type="library" name="Maven: io.zipkin.reporter:zipkin-sender-urlconnection:0.6.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-stream-rabbit:1.1.2.BUILD-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-stream-binder-rabbit:1.1.2.BUILD-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-stream:1.1.1.BUILD-SNAPSHOT" level="project" />
@@ -132,6 +135,9 @@
     <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:3.6.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-amqp:4.3.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:1.4.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:1.4.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jdbc:8.5.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-juli:8.5.6" level="project" />
