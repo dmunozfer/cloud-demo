@@ -44,7 +44,8 @@ public class OauthServerApplication {
 
 @RestController
 class PrincipalRestController {
-    @RequestMapping("/token")
+
+    @RequestMapping("/user")
     Principal principal(Principal principal) {
         return principal;
     }
