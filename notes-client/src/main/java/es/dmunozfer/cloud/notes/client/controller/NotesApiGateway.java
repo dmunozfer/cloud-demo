@@ -5,6 +5,7 @@ import es.dmunozfer.cloud.notes.client.client.NotesReader;
 import es.dmunozfer.cloud.notes.client.messaging.outbound.NotesWriter;
 import es.dmunozfer.cloud.notes.client.model.Note;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -47,6 +48,7 @@ public class NotesApiGateway {
         return this.notesReader.message();
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping
     public void write(@RequestBody Note note) {
         this.notesWriter.write(note.getText());

@@ -8,9 +8,14 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.integration.annotation.IntegrationComponentScan;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 @EnableBinding(NotesChannel.class)
 @IntegrationComponentScan
+
+@EnableResourceServer
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 
 @EnableFeignClients
 @EnableZuulProxy
