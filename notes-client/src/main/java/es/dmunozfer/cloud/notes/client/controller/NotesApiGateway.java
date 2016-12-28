@@ -1,13 +1,12 @@
 package es.dmunozfer.cloud.notes.client.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import es.dmunozfer.cloud.notes.client.model.Note;
+import es.dmunozfer.cloud.notes.client.messaging.outbound.NotesWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.hateoas.Resources;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,13 +19,15 @@ import java.util.stream.Collectors;
 @RequestMapping("/notes")
 public class NotesApiGateway {
 
+
     private final NotesReader notesReader;
+    private final NotesWriter notesWriter;
 
     @Autowired
-    public NotesApiGateway(NotesReader notesReader) {
+    public NotesApiGateway(NotesReader notesReader, NotesWriter notesWriter) {
         this.notesReader = notesReader;
+        this.notesWriter = notesWriter;
     }
-
 
     public Collection<String> fallbackText() {
         return new ArrayList<>();
@@ -43,9 +44,15 @@ public class NotesApiGateway {
                 .collect(Collectors.toList());
     }
 
+
     @GetMapping("message")
     public String message() {
         return this.notesReader.message();
+    }
+
+    @PostMapping
+    public void write(@RequestBody Note note) {
+        this.notesWriter.write(note.getText());
     }
 }
 
@@ -59,14 +66,3 @@ interface NotesReader {
     String message();
 }
 
-class Note {
-    private String text;
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-}
