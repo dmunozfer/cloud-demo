@@ -1,3 +1,7 @@
+# -------------------------------------------------------------------------------------
+# -- Arranca una shell con spring cloud data shell
+# -------------------------------------------------------------------------------------
+
 java -jar spring-cloud-dataflow-shell-1.1.0.RELEASE.jar
 
 #- Registra las apps de rabbitmq

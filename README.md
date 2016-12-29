@@ -59,6 +59,10 @@ El endpoint para autenticar es http://localhost:9191/oauth/token
 ###Zipkin
 + http://localhost:9411/
 
+###Hystrix dashboard
++ http://localhost:8010/hystrix.html
++ http://localhost:9999/hystrix.stream
+
 ###Notes - Server
 + http://localhost:8000/notes - Listado de notas
 + http://localhost:8000/message - Mensaje leido de property
