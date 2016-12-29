@@ -37,37 +37,37 @@ docker rmi spring_cloud_demo/config-server
 cd ..
 
 cd .\config-server\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 cd .\eureka-server\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 cd .\zipkin-server\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 # --
 cd .\notes-server\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 cd .\notes-client\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 # --
 cd .\dataflow-server\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 cd .\hystrix-dashboard\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 cd .\oauth-server\
-mvn package docker:build -DskipTests
+mvn clean package docker:build -DskipTests
 cd ..
 
 # Crea y ejecuta los contenedores de la aplicación
